@@ -1,0 +1,101 @@
+.Reports_page {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 92%;
+    display: none;
+    overflow-y: auto;
+}
+.sea_{
+    top: 35px;
+    background: var(--color-3); ;
+    position: relative;
+    right: 5%;
+    width: 90%;
+    height: 85px;
+    margin-bottom: 30px;
+                border: 3px solid black;
+                    border-radius: 10px;
+
+}
+.report_frame{
+        position: relative;
+            top: 10px;
+            right: 5%;
+            width: 90%;
+            background-color: beige;
+            border: 3px solid black ;
+            border-radius: 10px;
+}
+.sea_ptn{
+    top: 55px;
+        position: absolute;
+        right: 3%;
+        width: 94%;
+        height: 42px;
+        top: 43px;
+        display: flex;
+}
+
+.sea_ptn input {
+    width: 160px;
+    height: 30px;
+    margin-left: 5%;
+}
+.sea_ptn label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-right: 12%;
+}
+.Reports_trucks_table1,.Reports_trucks_table2,.Reports_trucks_table3,.Reports_trucks_table22 {
+    position: relative;
+    top: 15px;
+    width: 90%;
+    margin-right: 5%;
+    font-family: emoji;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+.Reports_truck_table1,.Reports_truck_table2,.Reports_truck_table3,.Reports_truck_table22 {
+    border-collapse: collapse;
+    width: 100%;
+    height: 50;
+    /* padding-top: 3px; */
+    outline: none;
+    border: 3px solid #050505;
+}
+
+.Reports_truck_table1 thead tr th,
+.Reports_truck_table2 thead tr th,
+.Reports_truck_table3 thead tr th
+,.Reports_truck_table22 thead tr th{
+    text-align: center;
+    background-color: var(--color-5); ;
+    border: 3px solid #050505;
+}
+
+.Reports_truck_table1 tbody tr td,
+.Reports_truck_table2 tbody tr td,
+.Reports_truck_table3 tbody tr td,.Reports_truck_table22 tbody tr td
+{
+    background-color:  var(--color-6);;
+    text-align: center;
+    border: 3px solid #050505;
+}
+.satrt_search{
+        border: none;
+            cursor: pointer;
+            width: 80px;
+            height: 34px;
+                border-radius: 10px;
+box-shadow: inset 1px 1px 1px 1px #417463;
+    background-color: #02c4d5;
+                font-size: 21px;
+                font-weight: bolder;
+                margin-right: 5%;
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "start": "2025-02-02",
+    "orders": [
+      {
+        "qr": 1,
+        "date__time_order": "2025-02-02",
+        "card_num": "wer//werwer",
+        "input_order_name": "32424",
+        "order_com_price": "7000",
+        "order_price": "2343",
+        "order_number": "500",
+        "order_binzen": "100",
+        "input_order_serial": "24423",
+        "order_cost": "2000",
+        "order_net": "41000",
+        "sign": "1"
+      }
+    ],
+    "expenses": [
+      {
+        "qr": 1,
+        "date__time_expenses": "2025-02-02",
+        "input_expenses_driver_name": "erwer",
+        "expenses_com_price": "500",
+        "expenses_price": "",
+        "expenses_number": "500",
+        "expenses_binzen": "",
+        "expenses_net": "1000",
+        "sign": "1"
+      }
+    ],
+    "pay": [],
+    "finsh_pay": {
+      "qr": 1,
+      "date_time_pariod": "2025-02-02",
+      "pariod_driver_name": "ali",
+      "num_orders": 1,
+      "all_net_salary": 41000,
+      "all_net_expenses": 1000,
+      "all_net_pay": 0,
+      "all_net": 40000,
+      "pr_money": 0,
+      "net": 18000,
+      "af_money": 22000,
+      "sign": "1"
+    }
+  },
+  [
+    "invoice",
+    [
+      {
+        "office_name": "OFFICE SYSTEM",
+        "office_num": "------------",
+        "office_add": "-------------"
+      }
+    ]
+  ],
+  "on",
+  0
+]

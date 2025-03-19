@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+:root {
+    --color-1: #a09c9c;
+        --color-2: #333;
+        --color-3: #d6d0d0;
+        --color-4: #b3c5ca;
+        --color-5: #689aca;
+        --color-6: #dfdfdf;
+    }
+.print_page{
+    padding: 5px;
+    direction: rtl;
+    width:1000px;
+    /* min-height: 1000px; */
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #f7f7f7;
+}
+.invoice_info {
+    background-position: top left;
+    height: 120px;
+    background-repeat: no-repeat;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        border: 3px solid #000;
+        border-radius: 5px;
+        padding-right: 20px;
+}
+.ico_pr{
+position: absolute;
+    top: 8px;
+    left: 8px;
+    height: 114px;
+    width: 985px;
+    z-index: -1;
+}
+.invoice_info div div{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.invoice_lable{
+    position: absolute;
+    right: 50%;
+    margin: 1px;
+    top: 10px;
+}
+/* .a2,.a4,.a8,.a10{
+    position: relative;
+    right: 10px;
+} */
+.m5{
+    position: absolute;
+    top: 90px;
+    right: 4%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #b60620;
+}
+.a10{
+    position: relative;
+    right: 10px;
+}
+.invoice_date {
+    position: absolute;
+    top: 82px;
+    right: 26%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #b60620;
+}
+.invoice_date1 {
+    position: absolute;
+    top: 100px;
+    right: 26%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #b60620;
+}
+.invoice_id{
+    position: absolute;
+    top: 90px;
+    right: 41%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #b60620;
+}
+
+.print_sub_table{
+        position: relative;
+            top:15px;
+            width: 100%;
+            height: 50px;
+            background-color: var(--color-3); ;
+            font-family: emoji;
+            font-size: 19px;
+            font-weight: bold;
+}
+
+
+.pr_sub_table{
+        border-collapse: collapse;
+            width: 100%;
+            height: 50;
+            padding-top: 3px;
+            outline: none;
+            border: 3px solid #050505;
+}
+
+.pr_sub_table thead tr th,.pr_orders_table thead tr th,.pr_Expenses_table thead tr th,.pr_pay_table thead tr th{
+    text-align: center;
+    background-color: var(--color-5); 
+    border: 3px solid #050505;
+}
+table tbody tr th{
+    background-color: var(--color-5); 
+
+}
+.pr_orders_table  tbody tr td,.pr_Expenses_table tbody tr td,.pr_pay_table tbody tr td{
+    background-color:  var(--color-6);;
+    /* color: #689aca; */
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid #050505;
+}
+.pr_sub_table tbody tr td{
+    background-color:  var(--color-6);;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid #050505;
+}
+.print_orders_table,.Expenses_print_table,.print_pay_registred_table {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    background-color: var(--color-3); ;
+    font-family: emoji;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.pr_orders_table,.pr_Expenses_table,.pr_pay_table{
+        border-collapse: collapse;
+        position: relative;
+        width: 100%; 
+            padding-top: 3px;
+            outline: none;
+            border: 3px solid #050505;
+}
+.seprator {
+    position: relative;
+    top: 5px;
+    /* margin-right: 19%; */
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.seprator1 {
+    position: relative;
+    width: 100%;
+    top: 10px;
+    display: flex;
+    margin-bottom: 10px;
+    /* height: 45px; */
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.print_pariod_registred_table {
+    position: relative;
+    top: 20px;
+    width: 100%;
+
+    overflow-y: auto;
+    background-color: var(--color-3);
+    font-family: emoji;
+    font-weight: normal;
+    border: 4px solid #060606;
+
+}
+
+
+
+.print_pariod_table0,.print_pariod_table00{
+    border-collapse: collapse;
+    width: 100%;
+    padding-top: 3px;
+    outline: none;
+    border: 3px solid #050505;
+}
+.print_pariod_table{
+    border-collapse: collapse;
+    width: 100%;
+    padding-top: 3px;
+    outline: none;
+    border: 3px solid #050505;
+}
+.print_pariod_table thead tr th{
+    padding: 8px;
+    text-align: center; 
+    background-color: var(--color-5); ;
+    border: 3px solid #050505;
+
+}
+.print_pariod_table0 thead tr th ,.print_pariod_table00 thead tr th{
+        padding: 8px;
+            text-align: center;
+            background-color: #43a5a9;
+            border: 3px solid #050505;
+}
+
+.print_pariod_table tbody tr td {
+    background-color:  var(--color-6);;
+    padding: 3px;
+    text-align: center;
+    border: 3px solid #050505;
+    color: #001485;
+    font-weight: bolder;
+
+}
+
+.print_pariod_table0 tbody tr td ,.print_pariod_table00 tbody tr td{
+    background-color:  var(--color-6);;
+    padding: 3px;
+    font-weight: bolder;
+    text-align: center;
+    border: 3px solid #050505;
+    color: #b60620;
+}
+.invoice_data{
+    width: 990;
+    height: 40px;
+    position: relative;
+    top: 30px;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d4aad;
+    border: #000000 3px solid;
+    border-radius: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+}

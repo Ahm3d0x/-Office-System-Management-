@@ -1,0 +1,213 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="print.css" />
+
+    <title>طباعه بيان</title>
+  </head>
+  <body onload="info_print() ">
+    <form class="print_page">
+      <div class="invoice_info">
+        <!-- <h2 class="invoice_lable">بيان</h2> -->
+        <img class="ico_pr" src="./ICON/8.png" alt="" />
+        <!-- <div class="r1">
+          <div class="m1">
+            <p class="a1">شركة:</p>
+            <p class="a2"></p>
+          </div>
+        </div>
+        <div class="r2">
+          <div class="m2">
+            <p class="a3">العنوان:</p>
+            <p class="a4"></p>
+          </div>
+        </div>
+
+        <div class="r3">
+          <div class="m4">
+            <p class="a7">الهاتف:</p>
+            <p class="a8"></p>
+          </div>
+        </div> -->
+
+        <div class="r4">
+          <div class="m5">
+            <p class="a9">اسم المستلم:</p>
+            <p class="a10"></p>
+          </div>
+        </div>
+        <span class="invoice_date"></span>
+        <span class="invoice_date1">------</span>
+
+        <span class="invoice_id">on : --</span>
+      </div>
+      <div class="print_invoice">
+      <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ نقلات _______________ _______________
+        </span>
+      </div>
+      <div class="print_orders_table">
+        <table class="pr_orders_table" border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>التاريخ</th>
+              <th>اسم السائق</th>
+              <th>من - الي</th>
+              <th>رقم البوليصه</th>
+              <th>كارته(وش // مقطوره)</th>
+              <th>الوزن</th>
+              <th>النولون</th>
+              <th>اجمالي</th>
+              <!-- <th>المندوب</th> -->
+              <th>العهده</th>
+              <th>المكتب</th>
+              <th>الصافي</th>
+            </tr>
+          </thead>
+          <tbody class="pr_orders_table_TableBody"></tbody>
+        </table>
+      </div>
+      <!-- <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ مصروفات _______________
+          _______________
+        </span>
+      </div>
+      <div class="Expenses_print_table">
+        <table class="pr_Expenses_table" border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>التاريخ</th>
+              <th>اسم السائق</th>
+              <th>السلفات</th>
+              <th>المحل</th>
+              <th>سولار</th>
+              <th>اخري</th>
+              <th>الصافي</th>
+            </tr>
+          </thead>
+          <tbody class="pr_Expenses_table_TableBody"></tbody>
+        </table>
+      </div> -->
+
+      <!-- <span class="seprator">
+        _______________ _______________ مدفوعات _______________ _______________
+      </span>
+
+      <div class="print_pay_registred_table">
+        <table class="pr_pay_table" border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>التاريخ</th>
+              <th>اسم السائق</th>
+              <th>المبلغ</th>
+            </tr>
+          </thead>
+          <tbody class="pr_pay_table_TableBody"></tbody>
+        </table>
+      </div> -->
+      <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ اجماليات _______________
+          _______________
+        </span>
+      </div>
+      <div class="print_sub_table">
+        <table class="pr_sub_table" border="1">
+          <thead>
+            <tr>
+              <th>السلفات</th>
+             <th>المحل</th>
+             <th>سولار</th>
+             <th>اخري</th>
+       </tr>
+          </thead>
+          <tbody class="pr_sub_table_TableBody"></tbody>
+        </table>
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      
+      <div class="invoice_data" >
+        <p>محاسب / باسم رفعت</p>
+        <p>شركة باسم رفعت للنقل</p>
+        <p class="current_date">--------------</p>
+      </div>
+      <br />
+
+      <br />
+    </div>
+    
+  
+  <div class="print_report">
+    <div class="print_pariod_registred_table">
+      <table class="print_pariod_table00" border="1">
+        <thead>
+         <tr>
+           <th>الرصيد السابق</th>
+           <th>الرصيد الحالي</th>
+           <th>الاجمالي</th>
+         </tr>
+       </thead>
+       <tbody class="print_pariod_table_TableBody00"></tbody>
+       </table>
+      <table class="print_pariod_table0" border="1">
+         <thead>
+          <tr>
+            <th>اجمالي النقلات</th>
+            <th> مجموع حساب النقلات</th>
+            <th> مجموع المصروفات</th>
+            <th>مجموع الصافي</th>
+            <th> اجمالي المبلغ المدفوع</th>
+          </tr>
+        </thead>
+        <tbody class="print_pariod_table_TableBody0"></tbody>
+        </table>
+      <table class="print_pariod_table" border="1">
+
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>البدايه</th>
+            <th>النهايه</th>
+            <th>اسم السائق</th>
+            <th>عدد النقلات</th>
+            <th> حساب النقلات</th>
+            <th>المصروفات</th>
+            <th>الصافي</th>
+            <th>المبلغ المدفوع</th>
+            <th>مستخدم</th>
+
+          </tr>
+        </thead>
+        <tbody class="print_pariod_table_TableBody"></tbody>
+      </table>
+    </div>
+    <div class="invoice_data" >
+      <p>محاسب / باسم رفعت</p>
+      <p>شركة باسم رفعت للنقل</p>
+      <p class="current_date1">--------------</p>
+    </div>
+    <br />
+    <br />
+
+  </div>
+  
+  
+  
+  </form>
+  </body>
+  <script src="print.js"></script>
+</html>

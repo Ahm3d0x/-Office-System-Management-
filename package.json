@@ -1,0 +1,51 @@
+{
+  "name": "truck-system",
+  "version": "3.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "electron-pdf": "^25.0.0",
+    "electron-pdf-window": "^1.0.12",
+    "electron-store": "^8.2.0",
+    "electron-window-state": "^5.0.3",
+    "node-fetch": "^2.7.0",
+    "print-js": "^1.6.0",
+    "puppeteer": "^22.13.1",
+    "systeminformation": "^5.25.11",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "electron main.js",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "EnG: Ahmed Attia",
+  "license": "ISC",
+  "description": "TRUCK-SYSTEM",
+  "devDependencies": {
+    "electron": "^29.4.5",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "productName": "TRUCK-SYSTEM",
+    "appId": "truck.office_system_bassem.com",
+    "win": {
+      "icon": "ICON/2.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "license": "readme.md",
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+    />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/model_truck.css" />
+    <link rel="stylesheet" href="CSS/Reports.css" />
+    <link rel="stylesheet" href="CSS/create_new_order.css" />
+    <link rel="stylesheet" href="CSS/truck_money.css" />
+    <link rel="stylesheet" href="CSS/manegmeant_data.css" />
+
+    <title>OFFICE SYSTEM</title>
+  </head>
+  <body>
+    <!-- <video class="background" autoplay loop muted>
+      <source src=""  />
+    </video> -->
+    <img src=".\ICON\6.jpg" class="background"  alt="">
+    <div class="office_name_class">
+      <!-- <img class="logo1" src="./ICON/2.png" alt=""> -->
+      <div ondblclick="location.reload();" class="office_name"></div>
+      <!-- <img class="logo2" src="./ICON/2.png" alt=""> -->
+    </div>
+
+
+    <div class="top-platform">
+      <button class="t1">القائمه</button>
+      <button
+        class="t2"
+        onclick="open_create_truck_page(),open_add_truck_page()"
+        class="truck_page"
+      >
+        التعريفات
+      </button>
+      <button class="t3" onclick="open_create_new_order()">الشاحنات</button>
+      <button class="t4" onclick="open_registra_new_money_page()">
+        المندوبين
+      </button>
+      <button class="t5" onclick="Reports_page_func()">
+        تقارير
+      </button>
+      <!-- <button class="t6" onclick="open_registra_new_com_money_page()">
+        
+      </button>
+      <button class="t7" onclick="open_check_com_truck_form()">
+        كشف حساب مكتب
+      </button> -->
+      <button onclick="electron.openNewWindow()" id="open_calc" class="t8">
+        الحاسبه
+      </button>
+    </div>
+
+    <div class="side-menu">
+      <div class="side-menu-maker">
+        <h2 class="side-name">OFFICE SYSTEM</h2>
+        <h6 ondblclick="openLink('https://ahmed-attia-portfolio-ahm3d0xs-projects.vercel.app/')" class="maker-name1">BY :EnG Ahmed Attia</h6>
+        <h6 class="maker-name">BY :EnG Elsayed Sultan</h6>
+      </div>
+      <button
+        class="s1"
+        onclick="open_create_truck_page(),open_add_truck_page()"
+        class="truck_page"
+      >
+        التعريفات
+      </button>
+        <button
+        type="button"
+        class="s5"
+        onclick="open_create_truck_page(),open_add_truck_page()"
+        class="truck_page"
+      >
+       تعريف شاحنه
+      </button>
+        <button
+        type="button"
+        class="s6"
+      onclick="open_create_truck_page(),open_add_truck_path_page()"
+        
+        class="truck_page"
+      >
+        تعريف مندوب
+      </button>
+                  <button
+        type="button"
+        class="s10"
+        onclick="open_create_truck_page(),open_list_truck_page()"
+        class="truck_page"
+      >
+        بيانات المكتب
+      </button>
+      <button class="s2" 
+        type="button"
+      onclick="open_create_new_order()">الشاحنات</button>
+
+      <button class="s3"
+        type="button"
+       onclick="open_registra_new_money_page()">
+        المندوبين
+      </button>
+      <button class="s4"
+        type="button"
+       onclick="Reports_page_func()">
+          تقارير
+      </button>
+
+      <!-- <button class="s5" onclick="open_registra_new_com_money_page()">
+        تسجيل دفعه
+      </button> -->
+      <!-- <button class="s6" onclick="open_check_com_truck_form()">
+        كشف حساب مكتب
+      </button> -->
+      <button class="s7" onclick="electron.openNewWindow()">الحاسبه</button>
+      <button class="s8" onclick="open_data_maneagment()">
+        ادارة البيانات
+      </button>
+
+      <button class="s9 add-new-user" onclick="add_new_user()">
+        اضافة مستخدم جديد
+      </button>
+      <br />
+      <div class="copy_right"></div>
+    </div>
+
+
+		<form id="activeForm">
+			<h2 class="actice-panle">تفعيل</h2>
+			<div class="serial_div">
+			<label class="serial_la">Serial Number</label>
+			<label class="serial_num">5486ffg585</label>
+		</div>
+			<div>
+			<label class="user-la1" for="active-num">كود التفعيل</label>
+			<input type="password" id="active-num" required class="active-input" />
+		</div><br />
+			<button type="button" class="active-ptn" onclick=" active()">
+				تفعيل النظام
+			</button>
+		</form>
+
+
+    <form class="alert">
+      <div>
+        <h3 class="msg_contnet">تم تسجيل الدخول بنجاح</h3>
+      </div>
+    </form>
+
+    <div id="signinForm">
+      <h2 class="sinin-panle">تسجيل الدخول</h2>
+      <label class="user-la" for="usernamein">اسم المستخدم:</label>
+      <input type="text" id="usernamein" class="user-input" /><br />
+      <label class="pass-la" for="passwordin">كلمة المرور:</label>
+      <input type="password" id="passwordin" class="pass-input" /><br />
+      <button type="button" class="enter-user" onclick="chek_singin_data()">
+        دخول
+      </button>
+    </div>
+
+    <form id="signupForm">
+      <div class="user_ptn">
+        <button
+          type="button"
+          class="save-new-user"
+          onclick="edit_or_save_user_switch()"
+        >
+          حفظ
+        </button>
+        <button type="button" class="delete_user" onclick="delet_user()">
+          حذف
+        </button>
+      </div>
+      <div class="enter_new_user0">
+        <span onclick="hide_new_user()" class="close-new-user">❌</span>
+        <h2 class="sinup-panle">مستخدم جديد</h2>
+        <label class="user-la" for="username">اسم المستخدم:</label>
+        <input type="text" id="username" /><br />
+
+        <label class="pass-la" for="password">كلمة المرور:</label>
+        <input type="text" id="password" /><br />
+
+        <label class="con_pass-la" for="con_password">مفتاح التسجيل:</label>
+        <input class="con_pass" type="password" id="con_password" />
+      </div>
+
+      <div class="user_tabel_data">
+        <table class="user_tabel" border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>التاريخ</th>
+              <th>اسم المستخدم</th>
+            </tr>
+          </thead>
+          <tbody class="user_Data_TableBody"></tbody>
+        </table>
+      </div>
+    </form>
+
+    <form class="create_truck_form">
+      <div class="model_truck_ptn">
+        <button
+          class="create_truck_ptn_page"
+          id="truck_button"
+          onclick="open_add_truck_page()"
+          type="button"
+        >
+          تعريف شاحنه
+        </button>
+        <button
+          class="create_path_ptn_page"
+          id="path_button"
+          onclick="open_add_truck_path_page()"
+          type="button"
+        >
+          تعريف مندوب
+        </button>
+        <button
+          class="truck_list_ptn_page"
+          id="office_button"
+          onclick="open_list_truck_page()"
+          type="button"
+        >
+          بيانات المكتب
+        </button>
+        <span
+          ondblclick="_close_create_truck_page()"
+          class="close_create_truck_page"
+          >❌</span
+        >
+      </div>
+
+      <div class="add_create_truck_page" id="add_create_truck_page">
+        <div class="create_truck_inputs">
+          <h2 class="func_name_create_truck">تعريف شاحنه</h2>
+          <label class="truck_qr_la" for="qr_truck_la">كود الشاحنه:</label>
+          <input type="number" readonly class="qr_truck_inp" id="qr_truck" />
+
+          <label class="truck_date_la" for="date_la">التاريخ:</label>
+          <input type="date" class="date_inp" id="date_la" />
+
+          <!-- <label class="truck_name_la" for="model_name">اسم الشاحنه:</label>
+          <input type="text" id="" class="truck_name_inp" /> -->
+
+          <label class="truck_number_la" for="truck_number">رقم الشاحنه:</label>
+          <input type="text" id="truck_number" class="truck_number_inp" />
+
+          <label class="driver_name_la" for="driver_name">اسم المالك:</label>
+          <input type="text" id="driver_name" class="driver_name_inp" />
+
+          <label class="driver_phone_la" for="driver_phone">رقم المالك:</label>
+          <input type="number" id="driver_phone" class="driver_phone_inp" />
+        </div>
+
+        <div class="create_truck_ptn">
+          <button
+            type="button"
+            class="save_new_create_truck"
+            onclick="edit_or_save_truck_switch()"
+          >
+            حفظ
+          </button>
+          <button
+            type="button"
+            class="new_create_truck"
+            onclick="_new_create_truck()"
+          >
+            جديد
+          </button>
+          <button
+            type="button"
+            class="delete_create_truck"
+            ondblclick="delete_create_truck()"
+          >
+            حذف
+          </button>
+        </div>
+
+<div class="first_money_block">
+        <div class="frist-money">
+        <div>
+          <label for="input-frist-money">رصيد السابق</label>
+          <input
+            type="number"
+            id="input-frist-money"
+            class="input_frist_money"
+            onkeyup=""
+          />
+        </div>
+      </div>
+      <div class="add_frist_money">
+        <button
+          type="button"
+          class="add_frist_money_ptn"
+          onclick="add_frist_money_func()"
+        >
+          اضافه
+        </button>
+
+      </div>
+</div>
+
+
+
+        <div class="search_list_truck_table">
+          <label for="search_list_truck1">الكود</label>
+          <input
+            type="number"
+            onkeyup="list_truck_qr_empty()"
+            class="search_list_truck_qr"
+            id="search_list_truck1"
+          />
+
+          <label for="search_list_truck2">رقم الشاحنه</label>
+          <input
+            type="text"
+            onkeyup="clear_input_search_qr_create_truck(),search_list_trucks_data()"
+            class="search_list_truck_name"
+            id="search_list_truck2"
+          />
+
+          <label for="search_list_truck3">اسم المالك</label>
+          <input
+            type="text"
+            onkeyup="clear_input_search_qr_create_truck(),search_list_trucks_data()"
+            class="search_list_truck_driver_name"
+            id="search_list_truck3"
+          />
+        </div>
+
+        <div class="list_truck_tabel_data">
+          <table class="list_truck_tabel" border="1">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>التاريخ</th>
+                <th>رقم الشاحنه</th>
+                <th>اسم المالك</th>
+                <th>رقم المالك</th>
+                <th>الرصيد السابق </th>
+            <th>مستخدم</th>
+
+              </tr>
+            </thead>
+            <tbody class="list_truck_Data_TableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="add_create_truck_path_page" id="add_create_truck_path_page">
+        <div class="search_path_table">
+          <label for="search_truck_path">الكود</label>
+          <input type="number" onkeyup="truck_path_qr_empty()"
+            class="search_path_qr"
+            id="search_truck_qr"
+          />
+
+          <label for="search_path_name">اسم المندوب</label>
+          <input
+            type="text"
+            onkeyup="search_truck_paths_data()"
+            class="search_path_name"
+            id="search_path_name"
+          />
+
+          <span ondblclick="_close_path_page()" class="close_path_page"
+            >❌</span
+          >
+        </div>
+
+        <div class="path_inputs">
+          <h2 class="func_name_path">تعريف مندوب</h2>
+
+          <label for="path_id">الكود</label>
+          <input type="number" class="path_qr" id="path_qr" readonly />
+
+          <label for="office">اسم المندوب</label>
+          <input type="text" class="office" id="office" />
+
+          <label for="sup_add">العنوان</label>
+          <input type="text" class="sup_add" id="sup_add" />
+        </div>
+
+        <div class="path_ptn">
+          <button
+            type="button"
+            class="save_new_path"
+            onclick="edit_or_save_path_switch()"
+          >
+            حفظ
+          </button>
+          <button type="button" class="new_path" onclick="_new_path()">
+            جديد
+          </button>
+          <button type="button" class="delete_path" ondblclick="delete_path()">
+            حذف
+          </button>
+        </div>
+
+        <div class="path_tabel_data">
+          <table class="path_tabel" border="1">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>اسم المندوب</th>
+                <th>العنوان</th>
+            <th>مستخدم</th>
+
+              </tr>
+            </thead>
+            <tbody class="path_Data_TableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="office_info" id="office_info">
+        <div class="info_inputs">
+          <h2 class="func_name_info">بيانات المكتب</h2>
+
+          <label for="name_info">الاسم </label>
+          <input type="text" class="name_info" id="name_info" />
+
+          <label for="addres_info">العنوان</label>
+          <input type="text" class="addres_info" id="addres_info" />
+
+          <label for="num_info">الهاتف</label>
+          <input type="number" class="num_info" id="num_info" />
+        </div>
+
+        <div class="office_info_ptn">
+          <button
+            type="button"
+            class="save_office_info"
+            onclick="office_info_save_Data()"
+          >
+            حفظ
+          </button>
+        </div>
+        <div class="show_data">
+          <div class="info_name">
+            <span>اسم المكتب</span>
+            <span class="info_name_data"> </span>
+          </div>
+          <div class="info_number">
+            <span>العنوان ⬅️</span>
+            <span class="info_add_data"> </span>
+          </div>
+          <div class="info_addres">
+            <span>الهاتف ⬅️</span>
+            <span class="info_num_data"></span>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <form class="registra_new_order">
+      <div class="select_truck_for_order">
+        <!-- <div class="select_truck_for_order_func_name">
+          اختر الشاحنه التي تريد تسجيل نقله لها :...
+        </div> -->
+
+        <div class="search_list_truck_table_for_order">
+          <label for="search_list_truck_for_order">الكود</label>
+          <input
+            type="number"
+            onkeyup="list_truck_qr_empty_for_order()"
+            class="search_list_truck_qr_for_order"
+            id="search_list_truck_for_order"
+          />
+          <label for="search_list_truck_for_order">رقم الشاحنه</label>
+          <input
+            type="text"
+            onkeyup="search_list_trucks_data_for_order()"
+            class="search_list_truck_name_for_order"
+            id="search_list_truck_for_order"
+          />
+
+          <label for="search_list_truck_for_order">اسم المالك</label>
+          <input
+            type="text"
+            onkeyup="search_list_trucks_data_for_order()"
+            class="search_list_truck_driver_name_for_order"
+            id="search_list_truck_for_order"
+          />
+
+          <span
+            ondblclick="_close_list_truck_page_for_order()"
+            class="close_list_truck_page"
+            >❌</span
+          >
+        </div>
+
+        <div class="list_truck_tabel_data_for_order">
+          <table class="list_truck_tabel_for_order" border="1">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>رقم الشاحنه</th>
+                <th>اسم المالك</th>
+              </tr>
+            </thead>
+            <tbody class="list_truck_Data_TableBody_for_order"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="conector_switch_data">
+        <div class="order_truck_ptn">
+          <button
+            class="create_truck_ptn_page c1"
+            onclick="open_inputs_orders_data()"
+            type="button"
+          >
+            تسجيل نقله
+          </button>
+          <button
+            class="truck_list_ptn_page c2"
+            onclick="open_list_orders_page()"
+            type="button"
+          >
+            تسجيل مصاريف
+          </button>
+          <!-- <button
+            class="truck_pay_ptn_page c3"
+            onclick="open_pay_page_page()"
+            type="button"
+          >
+            تسجيل مدفوع
+          </button> -->
+          <button
+            class="truck_pariod_ptn_page c4"
+            onclick="end_piriod_page()"
+            type="button"
+          >
+            تصفية حساب الشاحنه
+          </button>
+          <span
+            ondblclick="_data_truck_for_order()"
+            class="close_create_truck_page"
+            >❌</span
+          >
+        </div>
+        <div ondblclick="open_create_new_order()" class="selected_truck_info">
+          <div class="col1">
+            <!-- <div class="selected_truck_info_la_name">اسم الشاحنه :</div>
+            <div class="selected_truck_info_data_name"></div> -->
+            <div class="selected_truck_info_la_id"> رقم الشاحنه :</div>
+            <div class="selected_truck_info_data_id"></div>
+            <div class="selected_truck_info_la_driver_name">اسم المالك :</div>
+            <div class="selected_truck_info_data_driver_name"></div>
+            <div class="selected_truck_info_la_number">الرقم المالك :</div>
+            <div class="selected_truck_info_data_number"></div>
+            <div class="selected_truck_info_la_net_salary_pr">رصيد سابق :</div>
+            <div class="selected_truck_info_data_net_salary_pr"></div>
+            <div class="selected_truck_info_la_net_salary"></div>
+            <div class="selected_truck_info_data_net_salary"></div>
+          </div>
+          <!-- <div class="col2">
+                <div class="selected_truck_info_la_address">العنوان :</div>
+                <div class="selected_truck_info_data_address"></div>
+              </div>-->
+        </div>
+        <div class="data_truck_for_order">
+          <div class="registr_new_orders_page">
+            <div class="order_data_input">
+              <div>
+                <label for="input_order1">كود النقله</label>
+                <input
+                  type="number"
+                  id="input_order1"
+                  class="input_order_id"
+                  readonly
+                />
+              </div>
+              <div>
+                <label for="input_order2">التاريخ</label>
+                <input
+                  type="date"
+                  id="input_order2"
+                  class="input_order_date_time"
+                />
+              </div>
+              <div>
+                <label for="input_order91">اسم السائق</label>
+                <input
+                  type="text"
+                  id="input_order91"
+                  class="input_order_name"
+                />
+              </div>
+              <div>
+                <label for="input_order9">من  - الي</label>
+                <input
+                  type="text"
+                  id="input_order9"
+                  class="input_order_price"
+                />
+              </div>
+              <div>
+                <label for="input_order12">بوليصه</label>
+                <input
+                  type="text"
+                  id="input_order12"
+                  class="input_order_serial"
+                />
+              </div>
+                <div>
+                <label for="input_order11">رقم الكارته</label>
+                <input
+                  type="text"
+                  id="input_order11"
+                  class="input_order_card1"
+                  placeholder="وش"
+                />
+                <input
+                  type="text"
+                  id="input_order11"
+                  class="input_order_card2"
+                  placeholder="مقطوره"
+
+                />
+              </div>
+              <div>
+                <label for="input_order3">الوزن</label>
+                <input
+                  onkeyup="get_net_value()"
+                  type="number"
+                  id="input_order3"
+                  class="input_order_number"
+                />
+              </div>
+              <div>
+                <label for="input_order4">النولون</label>
+                <input
+                  onkeyup="get_net_value()"
+                  type="number"
+                  id="input_order4"
+                  class="input_order_binzen"
+                />
+              </div>
+              <div>
+                <label for="input_order10">العهده</label>
+                <input
+                  onkeyup="get_net_value()"
+                  type="number"
+                  id="input_order10"
+                  class="input_order_com_price"
+                />
+              </div>
+
+              <div>
+                <label for="input_order6">المكتب</label>
+                <input
+                  onkeyup="get_net_value()"
+                  type="number"
+                  id="input_order6"
+                  class="input_order_cost"
+                />
+              </div>
+              <div>
+                <label for="input_order7">الصافي</label>
+                <input
+                  type="number"
+                  id="input_order7"
+                  class="input_order_net"
+                  readonly
+                />
+              </div>
+
+            </div>
+            <div class="data_truck_for_order_ptn">
+              <button
+                type="button"
+                class="save_new_order"
+                onclick="edit_or_save_truck_order_switch()"
+              >
+                حفظ
+              </button>
+              <button type="button" class="new_order" onclick="_new_order()">
+                جديد
+              </button>
+              <button
+                type="button"
+                class="delete_order"
+                ondblclick="_delete_order()"
+              >
+                حذف
+              </button>
+            </div>
+          </div>
+          <div class="orders_registred_table">
+            <table class="orders_table" border="1">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>التاريخ</th>
+                  <th>اسم السائق</th>
+                  <th>من - الي</th>
+                  <th>رقم البوليصه</th>
+                  <th>كارته(وش // مقطوره)</th>
+                  <th>الوزن</th>
+                  <th>النولون</th>
+                  <th>اجمالي</th>
+                  <th>العهده</th>
+                  <th>المكتب</th>
+                  <th>الصافي</th>
+                  <th>مستخدم</th>
+
+                </tr>
+              </thead>
+              <tbody class="orders_table_TableBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="expenses_page">
+          <div class="Expenses_data_input">
+            <div>
+              <label for="input_expenses1">كود المصروفات</label>
+              <input
+                type="number"
+                id="input_expenses1"
+                class="input_expenses_id"
+                readonly
+              />
+            </div>
+            <div>
+              <label for="input_expenses2">التاريخ</label>
+              <input
+                type="date"
+                id="input_expenses2"
+                class="input_expenses_date_time"
+              />
+            </div>
+            <div>
+              <label for="input_expenses11"> اسم السائق</label>
+              <input
+                type="text"
+                id="input_expenses11"
+                class="input_expenses_driver_name"
+                onkeyup=""
+              />
+            </div>
+            <div>
+              <label for="input_expenses10">السلفات</label>
+              <input
+                type="number"
+                id="input_expenses10"
+                class="input_expenses_com_price"
+                onkeyup="get_net_expenses() "
+              />
+            </div>
+            <div>
+              <label for="input_expenses9">المحل</label>
+              <input
+                type="number"
+                id="input_expenses9"
+                class="input_expenses_price"
+                onkeyup="get_net_expenses() "
+              />
+            </div>
+            <div>
+              <label for="input_expenses3">سولار</label>
+              <input type="number"
+                id="input_Expenses3"
+                class="input_Expenses_number"
+                onkeyup="get_net_expenses() "
+              />
+            </div>
+            <div>
+              <label for="input_Expenses4">اخري</label>
+              <input
+                type="number"
+                id="input_Expenses4"
+                class="input_Expenses_binzen"
+                onkeyup="get_net_expenses() "
+              />
+            </div>
+            <div>
+              <label for="input_Expenses4">الاجمالي</label>
+              <input
+                type="number"
+                id="input_Expenses4"
+                class="input_Expenses_all"
+                readonly
+              />
+            </div>
+          </div>
+
+          <div class="data_truck_for_expenses_ptn">
+            <button
+              type="button"
+              class="save_new_expenses"
+              onclick="edit_or_save_truck_expenses_switch()"
+            >
+              حفظ
+            </button>
+            <button
+              type="button"
+              class="new_expenses"
+              onclick="_new_expenses()"
+            >
+              جديد
+            </button>
+            <button
+              type="button"
+              class="delete_expenses"
+              ondblclick="_delete_expenses()"
+            >
+              حذف
+            </button>
+          </div>
+          <div class="Expenses_registred_table">
+            <table class="Expenses_table" border="1">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>التاريخ</th>
+                  <th>اسم السائق</th>
+                  <th>السلفات</th>
+                  <th>المحل</th>
+                  <th>سولار</th>
+                  <th>اخري</th>
+                  <th>الصافي</th>
+                  <th>مستخدم</th>
+
+                </tr>
+              </thead>
+              <tbody class="Expenses_table_TableBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <!-- <div class="pay_page">
+          <div class="pay_data_input">
+            <div>
+              <label for="input_pay1">كود </label>
+              <input
+                type="number"
+                id="input_pay1"
+                class="input_pay_id"
+                readonly
+              />
+            </div>
+            <div>
+              <label for="input_pay2">التاريخ</label>
+              <input type="date" id="input_pay2" class="input_pay_date_time" />
+            </div>
+            <div>
+              <label for="input_pay11"> اسم السائق</label>
+              <input
+                type="text"
+                id="input_pay11"
+                class="input_pay_driver_name"
+                onkeyup=""
+              />
+            </div>
+            <div>
+              <label for="input_pay10">الرصيد السابق</label>
+              <input
+                type="number"
+                id="input_pay10"
+                class="input_pay_price"
+                onkeyup=""
+              />
+            </div>
+          </div>
+          <div class="data_truck_for_pay_ptn">
+            <button
+              type="button"
+              class="save_new_pay"
+              onclick="edit_or_save_truck_pay_switch()"
+            >
+              حفظ
+            </button>
+            <button type="button" class="new_pay" onclick="_new_pay()">
+              جديد
+            </button>
+         <button type="button" class="delete_pay" ondblclick="_delete_pay()">
+              حذف
+            </button>
+          </div>
+          <div class="pay_registred_table">
+            <table class="pay_table" border="1">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>التاريخ</th>
+                  <th>اسم السائق</th>
+                  <th>المبلغ</th>
+            <th>مستخدم</th>
+
+                </tr>
+              </thead>
+              <tbody class="pay_table_TableBody"></tbody>
+            </table>
+          </div>
+        </div> -->
+        <div class="end_pariod_page">
+          <div class="selected_truck_pay_info">
+            <div class="col3">
+              <div>
+                - عند تصفية حساب الشاحنه فأنه يتم ضغط كل البيانات الخاصه بهذه
+                - الفتره ويتم تفريغ كل بيانات الجداول (تسجيل نقله - تسجيل مصروف
+                تسجيل - مدفوع) استعداداً للفتره الجديده التي تبدأ بنفس تاريخ-
+                التصفيه
+              </div>
+              <!-- <div>
+                - لتصفية حساب الشاحنه يجب كتابة رصيد الشاحنه بالظبط فى الخانه
+                الرصيد
+              </div> -->
+            </div>
+          </div>
+
+          <div class="pariod_page">
+            <div class="pariod_data_input">
+              <div>
+                <label for="input_pariod1">كود التصفيه</label>
+                <input
+                  type="number"
+                  id="input_pariod1"
+                  class="input_pariod_id"
+                  readonly
+                />
+              </div>
+              <div>
+                <label for="input_pariod2">التاريخ</label>
+                <input
+                  type="date"
+                  id="input_pariod2"
+                  class="input_pariod_date_time"
+                />
+              </div>
+              <div>
+                <label for="input_pariod11"> الاسم </label>
+                <input
+                  type="text"
+                  id="input_pariod11"
+                  class="input_pariod_driver_name"
+                  onkeyup=""
+                />
+              </div>
+              <div>
+                <label for="input_pariod10">المبلغ</label>
+                <input
+                  type="number"
+                  id="input_pariod10"
+                  class="input_pariod_price"
+                  onkeyup=""
+                />
+              </div>
+            </div>
+            <div class="data_truck_for_pariod_ptn">
+              <button
+                type="button"
+                class="save_new_pariod"
+                onclick="edit_or_save_truck_pariod_switch()"
+              >
+                حفظ
+              </button>
+              <button type="button" class="new_pariod" onclick="_new_pariod()">
+                جديد
+              </button>
+              <button
+                type="button"
+                class="delete_pariod"
+                ondblclick="_delete_pariod()"
+              >
+                حذف
+              </button>
+            </div>
+            
+        				<div class="invoice_ptn">
+					<button
+						type="button"
+						class="show_invoice"
+						onclick="_print_page()">
+						معاينه
+					</button>
+					<button
+						type="button"
+						class="print_invoice"
+						onclick="print_invoice()">
+						طباعه
+					</button>
+				</div>
+
+
+        <div class="invoice_ptn1">
+					<button
+						type="button"
+						class="print_report"
+						onclick="print_report()">
+						طباعه تقرير
+					</button>
+				</div>
+
+        
+            <div class="pariod_registred_table">
+              <table class="pariod_table0" border="1">
+                 <thead>
+                  <tr>
+                    <th>اجمالي النقلات</th>
+                    <th> مجموع حساب النقلات</th>
+                    <th> مجموع المصروفات</th>
+                    <!-- <th> مجموع المدفوعات</th> -->
+                    <th>مجموع الصافي</th>
+                    <th> اجمالي المبلغ المدفوع</th>
+                    <th>الباقى</th>
+                  </tr>
+                </thead>
+                <tbody class="pariod_table_TableBody0"></tbody>
+                </table>
+              <table class="pariod_table" border="1">
+
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>البدايه</th>
+                    <th>النهايه</th>
+                    <th>اسم السائق</th>
+                    <th>عدد النقلات</th>
+                    <th> حساب النقلات</th>
+                    <th>المصروفات</th>
+                    <!-- <th>المدفوعات</th> -->
+                    <th>الصافي</th>
+                    <th>المبلغ المدفوع</th>
+                    <th>مستخدم</th>
+
+                  </tr>
+                </thead>
+                <tbody class="pariod_table_TableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+ <form class="registra_new_money">
+<div class="select_truck_for_money">
+  <!-- <div class="select_truck_for_money_func_name">
+    اختر المندوب    :...
+  </div> -->
+
+  <div class="search_list_truck_table_for_money">
+    <label for="search_list_truck_for_money">الكود</label>
+    <input
+      type="number"
+      onkeyup="list_truck_qr_empty_for_money()"
+      class="search_list_truck_qr_for_money"
+      id="search_list_truck_for_money"
+    />
+    <label for="search_list_truck_for_money">اسم المندوب</label>
+    <input
+      type="text"
+      onkeyup="search_list_trucks_data_for_money()"
+      class="search_list_truck_name_for_money"
+      id="search_list_truck_for_money"
+    />
+
+    <label for="search_list_truck_for_money">عنوان المندوب</label>
+    <input
+      type="text"
+      onkeyup="search_list_trucks_data_for_money()"
+      class="search_list_truck_driver_name_for_money"
+      id="search_list_truck_for_money"
+    />
+
+    <span
+      ondblclick="close_registra_new_money_page()"
+      class="close_list_truck_page"
+      >❌</span
+    >
+  </div>
+
+  <div class="list_truck_tabel_data_for_get_money">
+    <table class="list_truck_tabel_for_get_money" bmoney="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>اسم المندوب</th>
+          <th>عنوان المندوب</th>
+        </tr>
+      </thead>
+      <tbody class="list_truck_Data_TableBody_for_get_money"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="selected_get_money_form">
+
+	<div class="truck_info_get_money">
+		<table ondblclick="back_select_truck_model_for_money()" class="truck_info_table_get_money" border="1">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>اسم المندوب</th>
+					<th>عنوان المندوب</th>
+
+				</tr>
+			</thead>
+			<tbody class="truck_info_table_TableBody_get_money"></tbody>
+		</table>
+	</div>
+	<div class="truck_info_data_get_money">
+		<table class="truck_info_table_data_get_money" border="1">
+			<thead>
+				<tr>
+					<th>عدد العهدات</th>
+					<th> اجمالي العهدات</th>
+					<th>عدد مرات الاستلام </th>
+					<th> اجمالي المبلغ</th>
+					<th> الباقي</th>
+				</tr>
+			</thead>
+			<tbody class="truck_info_table_Data_TableBody_get_money"></tbody>
+
+		</table>
+	</div>
+
+
+<div class="regist_money_tools">
+					<div class="regist_money_inputs">
+					<label class="regist_money_qr_la" for="qr_regist_money">كود الاستلام:</label>
+					<input type="number" readonly class="qr_regist_money_inp" id="qr_regist_money" />
+
+					<label class="regist_money_date_time_la" for="date_time_la">التاريخ :</label>
+					<input type="date" class="regist_money_date_inp" id="date_time_la" />
+
+					<!-- <label class="regist_money_type_la" for="type_la"> المبلغ:</label>
+					<select onchange="regist_money_type_inp_onchange()" class="regist_money_type_inp" id="type_la">
+						<option value="سلفه">سلفه</option>
+						<option value="تصفيه">تصفيه</option>
+					</select> -->
+          <label class="regist_money_value_la" for="regist_money_value1">من:</label>
+					<input type="text" id="regist_money_value1" class="regist_money_from" />
+
+					<label class="regist_money_value_la" for="regist_money_value">المبلغ:</label>
+					<input type="number" id="regist_money_value" class="regist_money_value_inp" />
+
+				</div>
+
+				<div class="regist_money_ptn">
+					<button
+						type="button"
+						class="save_regist_money"
+						onclick="edit_or_save_truck_money_switch()">
+						حفظ
+					</button>
+					<button
+						type="button"
+						class="new_regist_money"
+						onclick="_new_regist_money()">
+						جديد
+					</button>
+					<button
+						type="button"
+						class="delete_regist_money"
+						ondblclick="_delete_regist_money()">
+						حذف
+					</button>
+				</div>
+</div>
+<div class="regist_money_out_tools">
+  <div class="regist_money_out_inputs">
+  <label class="outl1" for="out1">كود العهده:</label>
+  <input type="number" readonly class="out1" id="out1" />
+
+  <label class="outl2" for="out2">التاريخ :</label>
+  <input type="date" class="out2" id="out2" />
+
+  <label class="outl3" for="out3">رقم الايصال:</label>
+  <input type="text" id="out3" class="out3" /> 
+  <div>
+    <span class="out14"></span>
+  </div>
+  <label class="outl5" for="out5">رقم الشاحنه :</label>
+  <input type="text" id="out5" class="out5" />
+
+  <label class="outl6" for="out6">  اسم السائق:</label>
+  <input type="text" id="out6" class="out6" />
+
+
+
+  <label class="outl8" for="out8">المبلغ:</label>
+  <input type="number" id="out8" class="out8" />
+
+</div>
+
+<div class="out_ptn">
+  <button
+    type="button"
+    class="save_regist_money_out"
+    onclick="edit_or_save_truck_money_out_switch()">
+    حفظ
+  </button>
+  <button
+    type="button"
+    class="new_regist_money_out"
+    onclick="new_out()">
+    جديد
+  </button>
+  <button
+    type="button"
+    class="delete_regist_money_out"
+    ondblclick="_delete_regist_money_out()">
+    حذف
+  </button>
+</div>
+</div>
+        <div class="sup_search">
+          <label for="sup_sea_1">التاريخ</label>
+          <input
+            type="date"
+            onchange="money_sup_in(),out_table()"
+            class="sup_sea_1"
+            id="sup_sea_1"
+          />
+          <label class="la_sup_sea_3" for="sup_sea_3">اسم المالك</label>
+          <input
+            type="text"
+            onkeyup="out_table()"
+            class="sup_sea_3"
+            id="sup_sea_3"
+          />
+          <label class="la_sup_sea_2" for="sup_sea_2"> رقم الشاحنه</label>
+          <input
+            type="text"
+            onkeyup="out_table()"
+            class="sup_sea_2"
+            id="sup_sea_2"
+          />
+
+
+
+        </div>
+<div class="ptn_sup">
+					<button
+						type="button"
+						class="ptn_sup1"
+						onclick="money_sup_in()">
+						حساب المندوب
+					</button>
+					<button
+						type="button"
+						class="ptn_sup2"
+
+onclick="_sup_sea_1(),_new_regist_money()">
+						العهدات
+					</button>
+
+				</div>
+
+
+		<div class="regist_money">
+
+			<table class="regist_money_tabel" border="1">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>التاريخ</th>
+            <th>من</th>
+            <th>الي</th>
+						<!-- <th>الرصيد ق</th> -->
+						<th>المبلغ</th>
+						<!-- <th>الرصيد ب</th> -->
+            <th>مستخدم</th>
+					</tr>
+				</thead>
+				<tbody class="regist_money_Data_TableBody"></tbody>
+			</table>
+</div>
+
+  <div class="regist_money_out">
+
+  <table class="regist_money_out_tabel" border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>التاريخ</th>
+      <th>المالك الشاحنه</th>
+      <th>رقم الشاحنه</th>
+      <th>رقم الايصال</th>
+      <th>السائق</th>
+      <!-- <th>الرصيد ق</th> -->
+      <th>المبلغ</th>
+      <!-- <th>الرصيد ب</th> -->
+      <th>مستخدم</th>
+    </tr>
+  </thead>
+  <tbody class="regist_money_out_Data_TableBody"></tbody>
+</table>	
+</div>
+</div>
+
+
+
+
+</form>
+
+
+
+ <form ondblclick="back_print_page()" class="print_page">
+      <div class="invoice_info">
+        <img class="ico_pr" src="./ICON/8.png" alt="" />
+
+<!-- 
+        <div class="r1">
+          <div class="m1">
+            <p class="a1">شركة:</p>
+            <p class="a2"></p>
+          </div>
+        </div>
+        <div class="r2">
+          <div class="m2">
+            <p class="a3">العنوان:</p>
+            <p class="a4"></p>
+          </div>
+        </div>
+
+        <div class="r3">
+          <div class="m4">
+            <p class="a7">الهاتف:</p>
+            <p class="a8"></p>
+          </div>
+        </div> -->
+
+        <div class="r4">
+          <div class="m5">
+            <p class="a9">اسم المستلم:</p>
+            <p class="a10"></p>
+          </div>
+        </div>
+        <span class="invoice_date"></span>
+        <span class="invoice_date1"></span>
+
+        <span class="invoice_id"></span>
+      </div>
+      <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ نقلات _______________ _______________
+        </span>
+      </div>
+
+      <div class="print_orders_table">
+        <table class="pr_orders_table" border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>التاريخ</th>
+              <th>اسم السائق</th>
+              <th>من - الي</th>
+              <th>رقم البوليصه</th>
+              <th>كارته(وش // مقطوره)</th>
+              <th>الوزن</th>
+              <th>النولون</th>
+              <th>اجمالي</th>
+              <!-- <th>المندوب</th> -->
+              <th>العهده</th>
+              <th>المكتب</th>
+              <th>الصافي</th>
+            </tr>
+          </thead>
+          <tbody class="pr_orders_table_TableBody"></tbody>
+        </table>
+      </div>
+      <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ المصروفات_______________ _______________
+        </span>
+      </div>
+
+      <div class="Expenses_print_table">
+        <table class="pr_Expenses_table" border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>التاريخ</th>
+              <th>اسم السائق</th>
+              <th>السلفات</th>
+              <th>المحل</th>
+              <th>سولار</th>
+              <th>اخري</th>
+              <th>الصافي</th>
+            </tr>
+          </thead>
+          <tbody class="pr_Expenses_table_TableBody"></tbody>
+        </table>
+      </div>
+<!-- 
+      <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ المدفوعات _______________ _______________
+        </span>
+      </div>
+
+      <div class="print_pay_registred_table">
+        <table class="pr_pay_table" border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>التاريخ</th>
+              <th>اسم السائق</th>
+              <th>المبلغ</th>
+            </tr>
+          </thead>
+          <tbody class="pr_pay_table_TableBody"></tbody>
+        </table>
+      </div> -->
+      <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ الاجماليات _______________ _______________
+        </span>
+      </div>
+      <div class="print_sub_table">
+        <table class="pr_sub_table" border="1">
+          <thead>
+            <tr>
+              <th>عدد النقلات</th>
+              <th>الوزن </th>
+              <th>صافى النقلات</th>
+              <th>صافي مصاريف</th>
+            </tr>
+          </thead>
+          <tbody class="pr_sub_table_TableBody">
+
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <br />
+      <br />
+<div class="invoice_data" >
+  <p>محاسب / باسم رفعت</p>
+  <p>شركة باسم رفعت للنقل</p>
+  <p class="current_date">--------------</p>
+</div>
+      <br />
+      <br />
+      <br />
+
+      
+    </form>
+<form class="Reports_page">
+  <div class="report_frame">
+  <div class="sea_">
+      <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ التقارير _______________ _______________
+        </span>
+      </div>
+
+      <div class="sea_ptn">
+          <label for="sea_1"> من</label>
+    <input
+      type="date"
+      class="sea_1"
+      id="sea_1"
+    />
+
+    <label for="sea_2"> الي</label>
+    <input 
+      type="date"
+
+      class="sea_2"
+      id="sea_2"
+    />
+              <button
+            type="button"
+            class="satrt_search"
+            onclick="fill_report_office_tables_data()"
+          >
+            بدأ
+          </button>
+</div>
+</div>
+      <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ تقارير الشاحنات _______________ _______________
+        </span>
+      </div>
+     <div class="Reports_trucks_table1">
+        <table class="Reports_truck_table1" border="1">
+          <thead>
+            <tr>
+              <th>التصنيف </th>
+              <th>ID</th>
+              <th>رقم الشاحنه </th>
+              <th> اسم المالك</th>
+              <th>البيانات</th>
+              <!-- <th>صافى الشاحنه</th> -->
+            </tr>
+          </thead>
+          <tbody class="Reports_truck_table_TableBody1">
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ تقارير المندوبين _______________ _______________
+        </span>
+      </div>
+     <div class="Reports_trucks_table2">
+        <table class="Reports_truck_table2" border="1">
+          <thead>
+            <tr>
+              <th>التصنيف </th>
+              <th>ID</th>
+              <th>اسم المندوب </th>
+              <th> العنوان</th>
+              <th>العدد</th>
+              <th>المبلغ</th>
+            </tr>
+          </thead>
+          <tbody class="Reports_truck_table_TableBody2">
+            <tr>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+     <div class="Reports_trucks_table22">
+
+            <table class="Reports_truck_table22" border="1">
+          <thead>
+            <tr>
+              <th>اجمالي الدخل </th>
+              <th>اجمالي الخرج </th>
+              <th> الباقى</th>
+            </tr>
+          </thead>
+          <tbody class="Reports_truck_table_TableBody22">
+            <tr>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="seprator1">
+        <span class="seprator">
+          _______________ _______________ تقارير المكتب _______________ _______________
+        </span>
+      </div>
+     <div class="Reports_trucks_table3">
+        <table class="Reports_truck_table3" border="1">
+          <thead>
+            <tr>
+              <th>عدد الشاحنات الكلي</th>
+              <th>عدد المندوبين الكلي </th>
+              <!-- <th>عدد الشاحنات</th> -->
+              <th>عدد النقلات</th>
+              <th>صافى المكتب </th>
+              <!-- <th>صافى الشاحنه</th> -->
+            </tr>
+          </thead>
+          <tbody class="Reports_truck_table_TableBody3">
+            <tr>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <br>
+      <br>
+      <br>
+</form>
+
+
+    <form class="manegmeant_data_form">
+      <!-- <div class="manegmeant_data_ptn">
+				<button
+					class="backup_restor_ptn_page"
+					onclick="_backup_restor_ptn_page()"
+					type="button">
+					النسخ والاستعاده 
+				</button>
+				<button
+					class="cleaning_data_ptn_page"
+					onclick="_cleaning_data_ptn_page()"
+					type="button">
+					 تنظيف البيانات
+				</button>
+				<span
+					ondblclick="_close_manegmeant_data__page()"
+					class="close_manegmeant_data_page"
+					>❌</span>
+			</div> -->
+      <div class="back_restor_page">
+        <div class="manegmeant_data_func">النسخ الاحتياطى والاستعاده :...</div>
+        <div class="pass_data">
+          <label class="data_la1" for="back1">كلمة المرور :</label>
+          <input type="password" class="data_pass" id="back1" />
+        </div>
+        <div class="backup_page">
+          <label class="data_la2" for="back2">مسار التخزين :</label>
+          <input
+            type="text"
+            webkitdirectory
+            directory
+            multiple
+            class="back_path"
+            id="back2"
+          />
+          <button
+            ondblclick="path_back_selected()"
+            class="save_path"
+            type="button"
+          >
+            تغير المسار
+          </button>
+          <div class="selected_backup_path"></div>
+          <button type="button" ondblclick="_backup_()" class="backup_ptn">
+            الاحتفاظ بنسخه الان
+          </button>
+        </div>
+        <div class="restor_page">
+          <div>
+            <label class="data_la3" for="rest1">اختر ملف الاستعاده :</label>
+            <input
+              type="file"
+              accept=".json"
+              onchange="path_restor_selected(event)"
+              class="restor_path"
+              id="rest1"
+            />
+            <div class="selected_restor_path"></div>
+          </div>
+          <div class="restor_ptn">
+            <button
+              class="restor_truck"
+              ondblclick="_restor_truck()"
+              type="button"
+            >
+              استعادة بيانات الشاحنات
+            </button>
+            <button class="restor_com" ondblclick="_restor_com()" type="button">
+              استعادة بيانات المندوبين
+            </button>
+            <button class="restor_all" ondblclick="_restor_all()" type="button">
+              استعادة البيانات
+            </button>
+          </div>
+          <div class="reset_data">
+            <button
+              class="restor_truck"
+              ondblclick="reset_1()"
+              type="button"
+            >
+              حذف بيانات الشاحنات
+            </button>
+            <button class="restor_com" ondblclick="reset_2()" type="button">
+              حذف بيانات المندوبين
+            </button>
+            <button class="restor_all" ondblclick="reset_3()" type="button">
+              حذف البيانات
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+    <script src="JS/renderer.js"></script>
+    <script src="JS/create_truck.js"></script>
+    <script src="JS/create_new_order.js"></script>
+    <script src="JS/truck_money.js"></script>
+    <script src="JS/Reports.js"></script>
+    <script src="JS/switchies.js"></script>
+    <script src="JS/manegmeant_data.js"></script>
+  </body>
+</html>

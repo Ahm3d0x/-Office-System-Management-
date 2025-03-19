@@ -1,0 +1,627 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  direction: rtl;
+}
+
+input:focus {
+  scale: 1.08;
+}
+
+input,
+.search_truck_path_list_for_order,.regist_money_type_inp,
+.drive_path_inp ,.regist_com_money_type_inp ,.out4 {
+  height: 30px;
+  width: 210px;
+  padding-right: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--color-4); ;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 0px #404341f8;
+}
+
+.search_truck_path_list,
+.search_truck_path_list_for_order {
+  width: 150px;
+  position: relative;
+  padding-right: 0px;
+}
+
+/* /////////////////// list create track style zone styles  //////////////////// */
+
+.create_truck,
+.select_truck_for_order {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+
+  display: none;
+}
+.select_truck_for_order {
+  display: block;
+}
+.registra_new_order{
+  display: none;
+}
+
+
+.model_truck_ptn {
+  background: var(--color-3); ;
+  position: relative;
+  top: 3px;
+  right: 1%;
+  width: 98%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-wrap: nowrap;
+}
+.frist-money{
+  background: var(--color-3);
+  position: relative;
+  top: 30px;
+  right: 2%;
+  width: 30%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 22px;
+  font-weight: bolder;
+  flex-wrap: nowrap;
+}
+.frist-money div label{
+margin-left: 10px;
+}
+
+.add_frist_money{
+
+  background: var(--color-3);
+  position: relative;
+  top: 40px;
+  right: 2%;
+  width: 30%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-wrap: nowrap;
+  
+}
+.add_frist_money_ptn{
+  background-color: #2d4aad;
+  border-radius: 10px;
+
+}
+.first_money_block{
+  display: none;
+}
+.order_truck_ptn {
+  background: var(--color-3); ;
+  position: absolute;
+  top: 90px;
+  right: 1%;
+  min-width: 950px;
+  width: 98%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-wrap: nowrap;
+}
+
+.close_create_truck_page {
+  width: 35px;
+  height: 35px;
+  background: black;
+  padding: 3px;
+  font-size: 21px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.create_truck_form {
+  display: none;
+}
+
+.add_create_truck_page {
+  display: none;
+}
+
+
+
+
+.create_truck_inputs {
+    background: var(--color-3); ;
+    width: 30%;
+    height: 450px;
+    position: relative;
+    top: 10px;
+    direction: rtl;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.create_truck_inputs :first-child {
+position: relative;
+right: 50%;
+transform: translateX(50%);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.create_truck_inputs label {
+  font-size: 20px;
+  font-weight: bold;
+
+}
+.create_truck_inputs input {
+    margin-right: 10%;
+    width: 85%;
+}
+
+
+.create_truck_ptn {
+display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  height: 90px;
+  width: 30%;
+  background-color: var(--color-3); ;
+  font-family: emoji;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid black;
+  right: 2%;
+}
+
+.create_truck_ptn button {
+  width: 30%;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.save_new_create_truck {
+  background-color: green;
+}
+
+.new_create_truck {
+  background-color: #2443dd;
+}
+.delete_create_truck {
+  background-color: red;
+}
+
+/* /////////////////// list track style zone styles  //////////////////// */
+
+.select_truck_for_order_func_name {
+  background: var(--color-3); ;
+  position: absolute;
+  top: 10px;
+  right: 2%;
+  width: 96%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+.search_list_truck_table,
+.search_list_truck_table_for_order {
+    background: var(--color-3); ;
+    position: absolute;
+    top: 150px;
+      right: 33%;
+      width: 65%;
+      height: 50px; 
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+      border: 2px solid black;
+      border-radius: 10px;
+}
+.search_list_truck_table_for_order {
+  top: 15px;
+      background: var(--color-3); ;
+        position: relative;
+        right: 3%;
+        width: 94%;
+        height: 42px;
+}
+
+.search_list_truck_table input,
+.search_list_truck_table_for_order input {
+  width: 160px;
+  height: 30px;
+}
+
+.search_list_truck_select_path,
+.search_list_truck_select_path_for_order {
+  height: 30px;
+  width: 150px;
+  padding-right: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #fcf496;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 0px #404341f8;
+}
+
+.search_list_truck_table label,
+.search_list_truck_table_for_order label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close_list_truck_page {
+  width: 25px;
+  height: 25px;
+  background: black;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.list_truck_tabel_data,
+.list_truck_tabel_data_for_order {
+  position: absolute;
+  top: 205px;
+      width: 65%;
+      height: 645px;
+      overflow-y: auto;
+      background-color: var(--color-3); ;
+      font-family: emoji;
+      /* font-size: 22px; */
+      /* font-weight: bold; */
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border: 4px solid #060606;
+      right: 33%;
+}
+.list_truck_tabel_data_for_order {
+        position: relative;
+        top: 25px;
+        width: 94%;
+        height: 680px;
+        font-size: 19px;
+        font-weight: bold;
+        right: 3%;
+}
+.list_truck_tabel,
+.list_truck_tabel_for_order {
+  border-collapse: collapse;
+  width: 100%;
+  padding-top: 3px;
+  outline: none;
+  border: 3px solid #050505;
+}
+
+.list_truck_tabel thead tr th,
+.list_truck_tabel_for_order thead tr th {
+  padding: 8px;
+  text-align: center;
+  background-color: var(--color-5); ;
+  border: 3px solid #050505;
+}
+
+.list_truck_tabel tbody tr td,
+.list_truck_tabel_for_order tbody tr td {
+  background-color:  var(--color-6);;
+  padding: 3px;
+  text-align: center;
+  border: 3px solid #050505;
+  cursor: pointer;
+}
+
+/* /////////////////// list track_path style zone styles  //////////////////// */
+
+.add_create_truck_path_page {
+  position: fixed;
+  top: 135px;
+  left: 0;
+  width: 100%;
+  height: 92%;
+  display: none;
+}
+
+.search_path_table {
+    background: var(--color-3); ;
+      position: relative;
+      top: 8px;
+      right: 6%;
+      min-width: 800px;
+      width: 88%;
+      height: 42px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+      border: 2px solid black;
+      border-radius: 10px;
+}
+
+.search_path_table input {
+  width: 170px;
+  height: 30px;
+}
+
+.search_path_table label {
+  font-size: 20px;
+  font-weight: bold;
+}
+.search_path_ptn {
+  width: 30px;
+  position: relative;
+  height: 30px;
+  background: transparent;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  right: -30px;
+}
+
+.close_path_page {
+  width: 30px;
+  height: 30px;
+  background: black;
+  font-size: 21px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.func_name_path {
+  transform: translatex(-50%);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-left: 40%;
+}
+
+.path_inputs {
+background: var(--color-3); ;
+  width: 30%;
+  height: 300px;
+  position: relative;
+  top: 50px;
+  direction: rtl;
+  display: grid;
+  align-content: space-evenly;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  /* transform: translateX(-20%); */
+  right: 8%;
+}
+
+.path_inputs label {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  top: 20px;
+  right: 20px;
+}
+
+.path_inputs input {
+  position: relative;
+  right: 115px;
+  top: -10px;
+}
+
+.path_ptn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 420px;
+  height: 90px;
+  width: 30%;
+  background-color: var(--color-3); ;
+  font-family: emoji;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid black;
+  /* transform: translateX(-20%); */
+  right: 8%;
+}
+
+.path_ptn button {
+  width: 110px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.save_new_path {
+  background-color: green;
+}
+
+.new_path {
+  background-color: #2443dd;
+}
+.delete_path {
+  background-color: red;
+}
+
+.path_tabel_data {
+position: absolute;
+  top: 65px;
+  width: 50%;
+  height: 645px;
+  overflow-y: auto;
+  background-color: var(--color-3); ;
+  font-family: emoji;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 4px solid #060606;
+  /* transform: translateX(-30%); */
+  right: 41%;
+}
+
+.path_tabel {
+  border-collapse: collapse;
+  width: 100%;
+  padding-top: 3px;
+  outline: none;
+  border: 3px solid #050505;
+}
+
+.path_tabel thead tr th {
+  padding: 8px;
+  text-align: center;
+  background-color: var(--color-4); ;
+  border: 3px solid #050505;
+}
+
+.path_tabel tbody tr td {
+  background-color:  var(--color-6);;
+  padding: 3px;
+  text-align: center;
+  border: 3px solid #050505;
+  cursor: pointer;
+}
+
+.office_info{
+    position: fixed;
+      top: 135px;
+      left: 0;
+      width: 100%;
+      height: 92%;
+      display: none;
+}
+.func_name_info{
+    transform: translatex(50%);
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      position: absolute;
+      right: 50%;
+    }
+
+
+.info_inputs {
+  background: var(--color-3); ;
+  width: 30%;
+  height: 300px;
+  position: relative;
+  top: 50px;
+  direction: rtl;
+  display: grid;
+  align-content: space-evenly;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  /* transform: translateX(-20%); */
+  right: 8%;
+}
+
+.info_inputs label {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  top: 20px;
+  right: 20px;
+}
+
+.info_inputs input {
+  position: relative;
+  right: 115px;
+  top: -10px;
+}
+.office_info_ptn{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 420px;
+  height: 90px;
+  width: 30%;
+  background-color: var(--color-3); ;
+  font-family: emoji;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid black;
+  /* transform: translateX(-20%); */
+  right: 8%;
+}
+
+.office_info_ptn button {
+  height: 50px;
+  width: 90%;
+  border-radius: 8px;
+  background-color: green;
+}
+.show_data {
+  background-color: #4b6652;
+  width: 40%;
+  height: 300px;
+  position: absolute;
+  right: 50%;
+  top: 100px;
+  border: 4px black solid;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.show_data div {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 30px;
+  font-weight: bold;
+}

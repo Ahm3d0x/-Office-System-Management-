@@ -1,0 +1,340 @@
+.registra_new_money,.selected_get_money_form {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 92%;
+    display: none;
+
+}
+/* .registra_new_money{
+display: block;
+} */
+
+.data_truck_for_check {
+    background: var(--color-3); ;
+    position: relative;
+    top: 55px;
+    right: 2%;
+    width: 96%;
+    height: 90px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+    display: block;
+}
+
+
+
+.search_list_truck_table_for_money {
+    background: var(--color-3); ;
+    position: absolute;
+    top: 15px;
+    right: 2%;
+    width: 96%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+.search_list_truck_table_for_money input {
+    width: 22%;
+    height: 30px;
+}
+
+.search_list_truck_table_for_money label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.close_list_truck_page {
+    width: 25px;
+    height: 25px;
+    background: black;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.list_truck_tabel_data_for_get_money {
+    position: absolute;
+        top: 80px;
+        width: 94%;
+        height: 585px;
+        overflow-y: auto;
+        background-color: var(--color-3); ;
+        font-family: emoji;
+        font-size: 22px;
+        font-weight: bold;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border: 4px solid #060606;
+        right: 3%;
+}
+
+
+.list_truck_tabel_for_get_money {
+    border-collapse: collapse;
+    width: 100%;
+    padding-top: 3px;
+    outline: none;
+    border: 3px solid #050505;
+}
+
+
+.list_truck_tabel_data_for_get_money thead tr th {
+    text-align: center;
+    background-color: var(--color-5); ;
+    border: 3px solid #050505;
+
+}
+
+.list_truck_tabel_data_for_get_money tbody tr td {
+    background-color:  var(--color-6);;
+    text-align: center;
+    border: 3px solid #050505;
+    cursor: pointer;
+}
+
+
+
+.sup_search {
+   
+    background: var(--color-3); ;
+      position: absolute;
+      top: 195px;
+      right: 37%;
+      width: 60%;
+      height: 42px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 2px;
+}
+.sup_search input{
+    width: 160px;
+  height: 30px;
+}
+.sup_search label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+.truck_info_get_money,.truck_info_data_get_money {
+    position: absolute;
+    top: 10px;
+    width: 94%;
+    height: 60px;
+    background-color: var(--color-3); ;
+    font-family: emoji;
+    font-size: 22px;
+    font-weight: bold;
+    right: 3%;
+}
+
+.truck_info_data_get_money {
+    top: 85px;
+}
+
+.truck_info_table_get_money,.truck_info_table_data_get_money {
+    border-collapse: collapse;
+    width: 100%;
+    padding-top: 3px;
+    outline: none;
+    border: 3px solid #050505;
+}
+
+
+.truck_info_get_money thead tr th,.truck_info_data_get_money thead tr th{
+    text-align: center;
+    background-color: var(--color-5); ;
+    border: 3px solid #050505;
+
+}
+
+.truck_info_get_money tbody tr td ,.truck_info_data_get_money tbody tr td{
+    background-color:  var(--color-6);;
+    text-align: center;
+    border: 3px solid #050505;
+    cursor: pointer;
+}
+
+
+.regist_money_inputs {
+    background: var(--color-3); ;
+        width: 30%;
+        height: 300px;
+        position: relative;
+        top: 200px;
+        direction: rtl;
+        display: grid;
+        align-content: space-evenly;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+        right: 3%;
+}
+.regist_money_out_inputs {
+    background: var(--color-3); ;
+        width: 30%;
+        height: 450px;
+        position: relative;
+        top: 200px;
+        direction: rtl;
+        display: grid;
+        align-content: space-evenly;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+        right: 3%;
+}
+.regist_money_inputs label ,.regist_money_out_inputs label{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 20px;
+    right: 10px;
+}
+
+.regist_money_inputs input ,.regist_money_out_inputs input,.regist_money_type_inp{
+    position: relative;
+    right: 115px;
+    top: -10px;
+    width: 200px;
+}
+.out4{
+    position: relative;
+    right: 60px;
+    width: 200px;
+}
+.outl4{
+    font-size: 20px  !important;
+    font-weight: bold  !important;
+    position: relative  !important;
+    right: 10px  !important;
+    top:  0px !important;
+}
+
+.regist_money_ptn {
+display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 515px;
+    height: 90px;
+    width: 30%;
+    background-color: var(--color-3); ;
+    font-family: emoji;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid black;
+    right: 3%;
+}
+.out_ptn{
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 655px;
+        height: 90px;
+        width: 30%;
+        background-color: var(--color-3); ;
+        font-family: emoji;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 2px solid black;
+        right: 3%;
+    }
+.regist_money_ptn button ,.out_ptn button{
+    width: 28%;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.save_regist_money ,.save_regist_money_out{
+    background-color: green;
+}
+
+.new_regist_money ,.new_regist_money_out{
+    background-color: #2443dd;
+}
+
+.delete_regist_money ,.delete_regist_money_out{
+    background-color: red;
+}
+
+
+.regist_money ,.regist_money_out {
+    position: absolute;
+    top: 245px;
+    width: 60%;
+    height: 550px;
+    overflow-y: auto;
+    background-color: var(--color-3); ;
+    font-family: emoji;
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 4px solid #060606;
+    transform: translateX(-30%);
+    left: 21%;
+    display: none;
+
+    }
+
+.regist_money_tabel ,.regist_money_out_tabel{
+    border-collapse: collapse;
+    width: 100%;
+    /* padding-top: 3px; */
+    outline: none;
+    border: 3px solid #050505;
+}
+
+
+.regist_money thead tr th,.regist_money_out_tabel thead tr th{
+    padding: 8px;
+    text-align: center;
+    background-color: var(--color-4); ;
+    border: 3px solid #050505;
+}
+
+.regist_money tbody tr td ,.regist_money_out_tabel tbody tr td {
+    background-color:  var(--color-6);;
+    padding: 3px;
+    text-align: center;
+    border: 3px solid #050505;
+    cursor: pointer;
+}
+
+.ptn_sup{
+    display: flex;
+    align-content: space-around;
+    justify-content: space-evenly;
+    background-color: var(--color-4);
+    border: #050505 3px solid;
+    border-radius: 10px;
+    position: absolute;
+
+    flex-wrap: nowrap;
+    top: 150px;
+    right: 3%;
+    width: 94%;
+
+}

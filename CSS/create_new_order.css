@@ -1,0 +1,657 @@
+.data_truck_for_order{
+    position: relative;
+    top: 56px;
+    right: 2%;
+    width: 96%;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px;
+    display: block;
+}
+
+.selected_truck_info{
+    background: var(--color-3); ;
+        position: relative;
+        top: 56px;
+        right: 2%;
+        width: 96%;
+        height: 46px;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+        padding: 5px;
+        display: block;
+}
+
+
+
+
+
+.col1{
+    background-color: #e1eae3;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.col1 div{
+    display: inline;
+}
+.col2{
+    background-color:  var(--color-6);;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.col2 div{
+    display: inline;
+}
+
+
+
+.func_name_regist_order{
+    transform: translatex(-50%);
+        margin-top: 3px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        margin-left: 40%;
+    }
+    
+    
+    
+    .order_data_input {
+    background: var(--color-3); ;
+        width: 30%;
+        height: 490px;
+        position: relative;
+        top: 15px;
+        right: -1%;
+        direction: rtl;
+        display: grid;
+        align-content: space-evenly;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    .order_data_input label {
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        width: 50px;
+        margin-right: 5%;
+    
+    }
+    .order_data_input input,.drive_path_inp{
+        position: relative;
+        width: 55%;    
+        margin: 3px;
+        margin-right: 5%;
+    }
+    
+    .input_order_card1,.input_order_card2{
+            position: relative;
+            width: 30%!important;
+            margin: 3px;
+            margin-right: 2%!important;
+        }
+    
+.data_truck_for_order_ptn {
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 540px;
+        height: 60px;
+        width: 30%;
+        background-color: var(--color-3); ;
+        font-family: emoji;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 2px solid black;
+        right: -1%;
+}
+.invoice_ptn{
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 420px;
+        height: 60px;
+        width: 32%;
+        background-color: var(--color-3); ;
+        font-family: emoji;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 2px solid black;
+        right: 2%;
+}
+
+.data_truck_for_order_ptn button{
+    width: 30%;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.invoice_ptn button {
+    width: 45%;
+    height: 50px;
+    border-radius: 8px;
+}
+.save_new_order {
+    background-color: green;
+}
+
+.new_order {
+    background-color: #2443dd;
+}
+.delete_order {
+    background-color: red;
+}
+
+.show_invoice{
+    background-color: #3e996b;
+}
+.print_invoice {
+    background-color: #7f46b1;
+}
+.invoice_ptn1{
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 490px;
+        height: 60px;
+        width: 32%;
+        background-color: var(--color-3); ;
+        font-family: emoji;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 2px solid black;
+        right: 2%;
+}
+.print_report{
+    width: 94%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgb(243 159 12);
+
+}
+.conector_switch_data{
+    display: none;
+}
+
+
+.orders_registred_table{
+    position: absolute;
+        top: 17px;
+        width: 70%;
+        height: 600px;
+        overflow-y: auto;
+        background-color: var(--color-3); ;
+        font-family: emoji;
+        font-size: 18px !important;
+        font-weight: bold;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border: 4px solid #060606;
+        right: 30%;
+    /* display: none; */
+}
+
+
+
+.orders_table{
+    border-collapse: collapse;
+    width: 100%;
+    padding-top: 3px;
+    outline: none;
+    border: 3px solid #050505;
+}
+
+.orders_table thead tr th{
+    padding: 8px;
+    text-align: center;
+    background-color: var(--color-5); ;
+    border: 3px solid #050505;
+
+}
+
+.orders_table tbody tr td{
+    background-color:  var(--color-6);;
+    padding: 3px;
+    text-align: center;
+    border: 3px solid #050505;
+    cursor: pointer;
+}
+
+
+.expenses_page{
+    position: relative;
+    top: 65px;
+    display: none;
+
+}
+
+.Expenses_data_input{
+    background: var(--color-3); ;
+        width: 32%;
+        height: 490px;
+        position: relative;
+        /* top: 65px; */
+        right: 2%;
+        direction: rtl;
+        display: grid;
+        align-content: space-evenly;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+}
+        .Expenses_data_input label {
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            width: 50px;
+            margin-right: 5%;
+    
+        }
+    
+        .Expenses_data_input input {
+            position: relative;
+            width: 55%;
+            margin: 3px;
+            margin-right: 5%;
+        }
+.data_truck_for_expenses_ptn,.data_truck_for_pay_ptn ,.data_truck_for_pariod_ptn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 33px;
+    height: 60px;
+    width: 32%;
+    background-color: var(--color-3); ;
+    font-family: emoji;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid black;
+    right: 2%;
+}
+
+.data_truck_for_expenses_ptn button ,.data_truck_for_pay_ptn button,.data_truck_for_pariod_ptn button{
+    width: 30%;
+    height: 50px;
+    border-radius: 8px;
+}
+.save_new_expenses,.save_new_pay,.save_new_pariod {
+    background-color: green;
+}
+
+.new_expenses,.new_pay,.new_pariod{
+    background-color: #2443dd;
+}
+
+.delete_expenses,.delete_pay,.delete_pariod {
+    background-color: red;
+}
+
+.Expenses_registred_table,.pay_registred_table,
+.pariod_registred_table {
+    position: absolute;
+    top: 0px;
+    width: 63%;
+    height: 600px;
+    overflow-y: auto;
+    background-color: var(--color-3); ;
+    font-family: emoji;
+    font-size: 18px !important;
+    font-weight:normal ;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 4px solid #060606;
+    right: 35%;
+}
+
+
+.pariod_registred_table {
+    height: 570px;
+}
+.Expenses_table,.pay_table ,.pariod_table,.pariod_table0{
+    border-collapse: collapse;
+    width: 100%;
+    padding-top: 3px;
+    outline: none;
+    border: 3px solid #050505;
+}
+
+.Expenses_table thead tr th,.pay_table thead tr th,.pariod_table thead tr th{
+    padding: 8px;
+    text-align: center;
+    background-color: var(--color-5); ;
+    border: 3px solid #050505;
+
+}
+.pariod_table0 thead tr th{
+        padding: 8px;
+            text-align: center;
+            background-color: #43a5a9;
+            border: 3px solid #050505;
+}
+
+.Expenses_table tbody tr td ,.pay_table tbody tr td ,.pariod_table tbody tr td {
+    background-color:  var(--color-6);;
+    padding: 3px;
+    text-align: center;
+    border: 3px solid #050505;
+    cursor: pointer;
+}
+
+.pariod_table0 tbody tr td{
+        background-color: #5c9c6b;
+            padding: 3px;
+            text-align: center;
+            border: 3px solid #050505;
+            cursor: pointer;
+            font-size: 21px;
+}
+.pay_page{
+        position: relative;
+            top: 70px;
+            /* display: none; */
+}
+.pariod_page {
+    position: relative;
+    top: 70px;
+    /* display: none; */
+}
+.end_pariod_page{
+display: none;
+}
+
+.pay_data_input ,.pariod_data_input{
+    background: var(--color-3); ;
+    width: 32%;
+    height: 300px;
+    position: relative;
+    /* top: 65px; */
+    right: 2%;
+    direction: rtl;
+    display: grid;
+    align-content: space-evenly;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.pay_data_input label,.pariod_data_input label {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    width: 50px;
+    margin-right: 5%;
+
+}
+
+.pay_data_input input,.pariod_data_input input {
+    position: relative;
+    width: 55%;
+    margin: 3px;
+    margin-right: 5%;
+}
+
+.selected_truck_pay_info {
+    background: var(--color-3); ;
+        position: relative;
+        top: 57px;
+        right: 2%;
+        width: 96%;
+        height: 30px;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: bolder;
+        padding: 5px;
+        display: block;
+}
+
+
+
+
+
+.selected_truck_pay_info .col3 {
+    background-color:  var(--color-6);;
+        height: 20px;
+        display: grid;
+        justify-content: start;
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-items: center;
+        display: block;
+}
+.selected_truck_pay_info .col3 div {
+    display: block;
+    padding-right: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.print_page {
+    padding: 5px;
+    direction: rtl;
+    width: 1300px;
+    /* min-height: 1000px; */
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #e8e5e1;
+}
+
+.invoice_info {
+        background-position: top left;
+        height: 155px;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        border: 3px solid #000;
+        border-radius: 5px;
+        padding-right: 20px;
+}
+.ico_pr {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    height: 150px;
+    width: 1285px;
+    z-index: -1;
+}
+.invoice_info div div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.invoice_lable {
+    position: absolute;
+    right: 50%;
+    margin: 1px;
+    top: 10px;
+}
+
+/* .a2,
+.a4,
+.a8,
+.a10 {
+    position: relative;
+    right: 10px;
+} */
+
+.invoice_date {
+    position: absolute;
+    top: 105px;
+    right: 26%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #b60620;
+}
+
+.invoice_date1 {
+    position: absolute;
+    top: 125px;
+    right: 26%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #b60620;
+}
+.m5{
+    position: absolute;
+    top: 120px;
+    right: 4%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #b60620;
+}
+.invoice_id{
+    position: absolute;
+    top: 120px;
+    right: 41%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #b60620;
+}
+
+.print_sub_table {
+    position: relative;
+    top: 15px;
+    width: 100%;
+    height: 58px;
+    background-color: var(--color-3); ;
+    font-family: emoji;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+
+.pr_sub_table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 50;
+    padding-top: 3px;
+    outline: none;
+    border: 3px solid #050505;
+}
+
+.pr_sub_table tbody tr th{
+    background-color: var(--color-5); 
+
+}
+
+.pr_sub_table thead tr th,
+.pr_orders_table thead tr th,
+.pr_Expenses_table thead tr th,
+.pr_pay_table thead tr th {
+    text-align: center;
+    background-color: var(--color-5); ;
+    border: 3px solid #050505;
+
+}
+
+.pr_sub_table tbody tr td,
+.pr_orders_table tbody tr td,
+.pr_Expenses_table tbody tr td,
+.pr_pay_table tbody tr td {
+    background-color:  var(--color-6);;
+    text-align: center;
+    border: 3px solid #050505;
+}
+
+.print_orders_table,
+.Expenses_print_table,
+.print_pay_registred_table {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    background-color: var(--color-3); ;
+    font-family: emoji;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.pr_orders_table,
+.pr_Expenses_table,
+.pr_pay_table {
+    border-collapse: collapse;
+    position: relative;
+    width: 100%;
+    padding-top: 3px;
+    outline: none;
+    border: 3px solid #050505;
+}
+
+.seprator {
+    position: relative;
+    top: 5px;
+    /* margin-right: 19%; */
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.seprator1 {
+    position: relative;
+    width: 100%;
+    top: 10px;
+    display: flex;
+    margin-bottom: 10px;
+    /* height: 45px; */
+    justify-content: center;
+}
+.invoice_data{
+    width: 1290px;
+    height: 40px;
+    position: relative;
+    top: 30px;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d4aad;
+    border: #000 2px solid;
+    border-radius: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
